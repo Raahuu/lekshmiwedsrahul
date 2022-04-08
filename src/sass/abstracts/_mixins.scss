@@ -1,0 +1,82 @@
+@mixin flexAlign(
+  $justifyContent: flex-start,
+  $alignItem: stretch,
+  $direction: row
+) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItem;
+  flex-direction: $direction;
+}
+
+/* Media Query manager */
+
+//  Accepted values include
+//    * x-large
+//    * large
+//    * normal
+//    * medium
+//    * small
+//    * custom-min
+//    * custom-max
+//    * custom-minmax
+
+@mixin responsive-mode($breakpoint, $customValue1: null, $customValue2: null) {
+  /* Custom min breakpoint */
+  @if $breakpoint == custom-min {
+    @media (min-width: $customValue1) {
+      @content;
+    }
+  }
+
+  /* Custom max breakpoint */
+  @if $breakpoint == custom-max {
+    @media (max-width: $customValue1) {
+      @content;
+    }
+  }
+
+  /* Custom minmax breakpoint */
+  @if $breakpoint == custom-minmax {
+    @media (min-width: $customValue1) and (max-width: $customValue2) {
+      @content;
+    }
+  }
+
+  /* Extra Large breakpoint => More than 1400 px */
+  @if $breakpoint == extreme {
+    @media (min-width: $extreme) {
+      @content;
+    }
+  }
+  /* Extra Large breakpoint => 1400 px */
+  @if $breakpoint == x-large {
+    @media (max-width: $x-large) {
+      @content;
+    }
+  }
+  /* Normal Desktop breakpoint => 1200 px */
+  @if $breakpoint == normal {
+    @media (max-width: $normal) {
+      @content;
+    }
+  }
+  /* Large breakpoint => 992 px */
+  @if $breakpoint == large {
+    @media (max-width: $large) {
+      @content;
+    }
+  }
+  /* Medium breakpoint => 768 px*/
+  @if $breakpoint == medium {
+    @media (max-width: $medium) {
+      @content;
+    }
+  }
+  /* Small breakpoint => 576 px*/
+  @if $breakpoint == small {
+    @media (max-width: $small) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.action-button {
+  border-radius: 5px;
+  background-color: $color-primary;
+  color: $color-white;
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  &:hover {
+    box-shadow: 2px 2px 3px $shadow-color;
+    cursor: pointer;
+  }
+
+  &.disabled {
+    background-color: lighten($color: $color-primary, $amount: 25);
+    cursor: not-allowed;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  &.left-icon {
+    i {
+      margin-right: 1rem;
+    }
+  }
+  &.right-icon {
+    i {
+      margin-left: 1rem;
+    }
+  }
+}

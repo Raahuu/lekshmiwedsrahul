@@ -1,0 +1,32 @@
+$color-primary: #CEE5D0;
+$color-secondary: #3E7C17;
+$color-tertiary: #FBFF00;
+$color-white: #f5f5f5;
+$color-black: #18134C;
+
+$color-text-dark: #272727;
+$color-text-light: #0000008a;
+
+$shadow-color: #d3d3d3;
+
+// FONTS
+$font-alex: 'Alex Brush', cursive;
+$font-rhyme: 'BioRhyme', serif;
+$font-monkey: 'Happy Monkey', cursive;
+$font-nixie: 'Nixie One', cursive;
+
+// Margin
+$content-margin-large: 55%;
+$content-margin-normal: 70%;
+$content-margin-medium: 80%;
+$content-margin-small: 96%;
+$content-margin-mobile: 96%;
+
+// Breakpoints
+$extreme: 87.5em; /* =>  >1400 px */
+$x-large: 87.5em; /* =>  1400 px  */
+$normal: 75em; /* =>  1200 px  */
+$large: 62em; /* =>  992 px   */
+$medium: 48em; /* =>  768 px   */
+$small: 40em; /* =>  640 px   */
+$mobile: 40em; /* =>  640 px   */
