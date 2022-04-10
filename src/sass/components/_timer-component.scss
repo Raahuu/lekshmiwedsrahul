@@ -10,18 +10,52 @@
     border-radius: 2rem;
     transform: translate(-50%, -50%);
     @include flexAlign(null, center, column);
+
+    @include responsive-mode(x-large) {
+      width: 60%;
+    }
+    @include responsive-mode(large) {
+      width: 80%;
+    }
+    @include responsive-mode(small) {
+      width: 95%;
+    }
   }
   &-title {
     font-family: $font-monkey;
-    font-size: 1.8rem;
+    font-size: 2.6rem;
     color: $color-tertiary;
+    @include responsive-mode(x-large) {
+      font-size: 2.2rem;
+    }
+    @include responsive-mode(large) {
+      font-size: 1.8rem;
+    }
+    @include responsive-mode(small) {
+      font-size: 1.6rem;
+    }
+    @include responsive-mode(custom-minmax, 300px, 450px) {
+      font-size: 1.4rem;
+    }
   }
   &-wrapper {
-    width: $content-margin-large;
+    width: 95%;
     @include flexAlign(center, center);
   }
   &-component {
     margin: 2rem;
+    @include responsive-mode(x-large) {
+      margin: 2rem;
+    }
+    @include responsive-mode(large) {
+      margin: 1.5rem;
+    }
+    @include responsive-mode(small) {
+      margin: 1rem;
+    }
+    @include responsive-mode(custom-minmax, 300px, 450px) {
+      margin: 5px;
+    }
   }
   &-box {
     background-color: $color-primary;
@@ -36,18 +70,56 @@
     color: $color-secondary;
     @include flexAlign(center, center);
 
+    @include responsive-mode(x-large) {
+      width: 4rem;
+      height: 4rem;
+      font-size: 3rem;
+    }
+    @include responsive-mode(large) {
+      width: 3rem;
+      height: 3rem;
+      font-size: 2rem;
+    }
+    @include responsive-mode(small) {
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    @include responsive-mode(custom-minmax, 300px, 450px) {
+      width: 1.5rem;
+      height: 1.5rem;
+      padding: 1.7rem;
+      font-size: 1.2rem;
+    }
+
     &:hover {
-        transition: 0.5s;
-        transform: translateY(-5px);
-        cursor: pointer;
-        box-shadow: 2px 2px 4px 4px $shadow-color;
+      transition: 0.5s;
+      transform: translateY(-5px);
+      cursor: pointer;
+      box-shadow: 2px 2px 4px 4px $shadow-color;
     }
   }
   &-label {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-family: $font-monkey;
     text-align: center;
     margin-top: 1rem;
     color: $color-tertiary;
+
+    @include responsive-mode(x-large) {
+      font-size: 1.7rem;
+    }
+    @include responsive-mode(large) {
+      font-size: 1.5rem;
+    }
+    @include responsive-mode(small) {
+      font-size: 1.3rem;
+    }
+
+    @include responsive-mode(custom-minmax, 300px, 450px) {
+      font-size: 1.1rem;
+    }
+
   }
 }
